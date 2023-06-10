@@ -8,5 +8,6 @@ public class PlayerData : ScriptableObject
     public float speed;
     public float health;
     public float originalHealth;
+    public float rotationSpeed;
 
 }

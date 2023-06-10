@@ -5476,7 +5476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1538366988}
-  characterShip: {fileID: 1538366991}
 --- !u!4 &431838880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8884989843465156940, guid: e118251fd8822b74ca84aa2ead7377bc,
@@ -6662,18 +6661,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1538366987}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1538366991 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8991272061658521273, guid: e118251fd8822b74ca84aa2ead7377bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1538366987}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538366988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32520758c402b354d887c03c4dc2dcba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1633759879
 GameObject:
   m_ObjectHideFlags: 0
