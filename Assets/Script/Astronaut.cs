@@ -16,7 +16,7 @@ public class Astronaut : MonoBehaviour
     //GameOver Text
     public TMP_Text gameOverText;
     public TMP_Text scoreText;
-
+    //Un comentario para probar Git, Saludos
     public void InstanciarEfecto()
     {
         Instantiate(efect, transform.position, transform.rotation);
