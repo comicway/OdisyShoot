@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharactersManager : MonoBehaviour
 {
     [SerializeField] private GameObject character;
-    [SerializeField] private Moving characterShip;
+    //[SerializeField] private Moving characterShip;
 
     public void Moving(float speed)
     {
