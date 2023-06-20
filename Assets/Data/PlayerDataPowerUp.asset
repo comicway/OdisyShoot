@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52df1497044fe84a9c24a8e470f8409, type: 3}
   m_Name: PlayerDataPowerUp
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 30
   health: 20
   originalHealth: 20
   rotationSpeed: 150
