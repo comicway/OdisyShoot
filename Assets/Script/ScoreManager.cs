@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -17,5 +18,9 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = score.ToString();
         //Debug.Log("El puntaje es " + score);
+        if (score == 20)
+        {
+            SceneManager.LoadScene("PlanetLevel2");
+        }
     }
 }
