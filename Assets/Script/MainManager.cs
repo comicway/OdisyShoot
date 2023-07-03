@@ -9,8 +9,16 @@ public class MainManager : MonoBehaviour
     {
         SceneManager.LoadScene("PlanetLevel1");
     }
+    public void GoToCredit()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Quit()
     {
         Application.Quit();
-    } 
+    }
 }
