@@ -16,6 +16,9 @@ public class Astronaut : MonoBehaviour
     //GameOver Text
     public TMP_Text gameOverText;
     public TMP_Text scoreText;
+    // UI Fichas
+    [SerializeField] public Image imagenUI1;
+    [SerializeField] public Image imagenUI2;
     public void InstanciarEfecto()
     {
         Instantiate(efect, transform.position, transform.rotation);
@@ -35,6 +38,16 @@ public class Astronaut : MonoBehaviour
             Debug.Log("AGARRE UN PIEZA");
             cantPiza++;
             Debug.Log(cantPiza);
+
+            switch (cantPiza)
+            {
+                case 1:
+                    imagenUI1.gameObject.SetActive(true);
+                    break;
+                case 2:
+                    imagenUI2.gameObject.SetActive(true);
+                    break;
+            }
         }
     }
     public void ChangeScene()
@@ -55,12 +68,14 @@ public class Astronaut : MonoBehaviour
     private void Awake()
     {
         gameOverText.enabled = false;
+        imagenUI1.gameObject.SetActive(false);
+        imagenUI2.gameObject.SetActive(false);
     }
     void Update()
     {
         ChangeScene();
         Moving();
-        scoreText.text = cantPiza.ToString();
+        //scoreText.text = cantPiza.ToString();
     }
 
 }
