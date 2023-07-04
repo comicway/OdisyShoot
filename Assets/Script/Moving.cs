@@ -34,6 +34,8 @@ public class Moving : MonoBehaviour
     public Action EventoVida;
     public Action EventoDisparo;
     public Action EventoUI;
+    //RayCast Helt
+    [SerializeField] private ShipRaycast raycastVida;
 
     private void disparar()
     {
@@ -72,6 +74,16 @@ public class Moving : MonoBehaviour
         vidaText.text = playerData.health.ToString();
         Debug.Log("Me esta llamando EventoUI y lo escuha updateUI");
     }
+    //RayCast para quitar vida
+
+    private void MenosVida()
+    {
+
+         if (raycastVida.reycasOk)
+            {
+                playerData.health --; 
+            }
+    }
     private void Awake()
     {
         gameOverText.enabled = false;
@@ -106,5 +118,8 @@ public class Moving : MonoBehaviour
         EventoVida?.Invoke();
        
         EventoUI?.Invoke();
+
+        //RayCast para quitar vida
+        MenosVida();
     }
 }

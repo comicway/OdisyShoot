@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   health: 10
-  originalHealth: 10
+  originalHealth: 11
+  rotationSpeed: 0

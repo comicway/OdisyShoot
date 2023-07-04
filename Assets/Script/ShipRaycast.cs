@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class ShipRaycast : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform PuntoDeMira;
+    [SerializeField] private float maxDistance;
+    [SerializeField] private float sphereRadius;
+    [SerializeField] private LayerMask reycastLayer;
 
-    // Update is called once per frame
+    public bool reycasOk;
+    private bool SeeShoot()
+    {
+        bool isSee = Physics.SphereCast(PuntoDeMira.position, sphereRadius, PuntoDeMira.forward, out RaycastHit ShepreHit, maxDistance, reycastLayer);
+        
+        if (isSee)
+        {
+            reycasOk = true;
+        }
+        else 
+        {
+            reycasOk = false; 
+        }
+        return reycasOk;
+    }
     void Update()
     {
-        
+        SeeShoot();
+        //Debug.Log($"¿De verdad esta chocando? {reycasOk}");
     }
 }
